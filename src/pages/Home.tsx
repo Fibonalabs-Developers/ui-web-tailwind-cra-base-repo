@@ -1,8 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDummyList } from 'src/api/demo';
 
-const HomePage = () => {
+function HomePage() {
   const { data } = useDummyList();
 
   return (
@@ -16,6 +15,12 @@ const HomePage = () => {
         </li>
       </ul>
       <h1 className="text-4xl font-bold">Home Page</h1>
+      <button
+        type="button"
+        className="text-blue-400 bg-black px-2 py-2 rounded-lg"
+      >
+        Hello
+      </button>
       <ul>
         {data?.map(({ title, id }) => (
           <li key={id}>{title}</li>
@@ -23,6 +28,6 @@ const HomePage = () => {
       </ul>
     </>
   );
-};
+}
 
 export default HomePage;
