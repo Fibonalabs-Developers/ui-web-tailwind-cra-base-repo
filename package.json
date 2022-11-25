@@ -8,6 +8,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
+    "preinstall": "npx npm-force-resolutions",
     "lint": "tsc && eslint ./src/**/*.tsx",
     "lighthouse:desktop": "lighthouse http://localhost:3000/ --headless --preset=desktop --view --output html --output-path ./lighthouse.html",
     "lighthouse:mobile": "lighthouse http://localhost:3000/ --headless --preset=desktop --view --output html --output-path ./lighthouse.html",
@@ -69,6 +70,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "postcss": "^8.2.10"
   },
   "lint-staged": {
     "./**/*.{js,ts,tsx}": [
